@@ -48,9 +48,6 @@ export default function StreamChat() {
               <Users className="w-6 h-6" />
             </div>
             <p className="text-xs font-semibold">Welcome to the chat!</p>
-            <p className="text-[10px] text-muted-foreground/45 max-w-[180px] leading-relaxed">
-              Messages are sent in real-time to all participants in this room.
-            </p>
           </div>
         ) : (
           chatMessages.map((msg) => {
@@ -96,7 +93,7 @@ export default function StreamChat() {
             disabled={!messageText.trim()}
             className={`p-2 mr-1.5 rounded-lg transition-all flex items-center justify-center cursor-pointer ${
               messageText.trim()
-                ? "bg-primary hover:bg-primary/90 text-white shadow-md shadow-primary/20"
+                ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-md shadow-white/5"
                 : "text-muted-foreground/35 bg-transparent"
             }`}
           >

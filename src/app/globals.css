@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: 240 10% 4%;
-  --foreground: 0 0% 98%;
+  --background: 0 0% 0%; /* Pure Black */
+  --foreground: 0 0% 100%; /* Pure White */
   
-  --card: 240 10% 6%;
-  --card-foreground: 0 0% 98%;
+  --card: 0 0% 3%; /* Very dark gray for card */
+  --card-foreground: 0 0% 100%;
   
-  --popover: 240 10% 5%;
-  --popover-foreground: 0 0% 98%;
+  --popover: 0 0% 2%;
+  --popover-foreground: 0 0% 100%;
   
-  --primary: 270 91% 65%; /* Sleek Purple Glow */
-  --primary-foreground: 0 0% 100%;
+  --primary: 0 0% 100%; /* Pure White primary */
+  --primary-foreground: 0 0% 0%; /* Black text on white primary */
   
-  --secondary: 240 6% 12%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 0 0% 10%; /* Dark gray secondary */
+  --secondary-foreground: 0 0% 100%;
   
-  --muted: 240 5% 15%;
-  --muted-foreground: 240 5% 65%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 60%;
   
-  --accent: 270 91% 65%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 0 0% 100%;
+  --accent-foreground: 0 0% 0%;
   
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
   
-  --border: 240 6% 16%;
-  --input: 240 6% 16%;
-  --ring: 270 91% 65%;
+  --border: 0 0% 16%; /* Dark gray border */
+  --input: 0 0% 16%;
+  --ring: 0 0% 100%;
   
   --radius: 0.75rem;
 }

@@ -30,10 +30,7 @@ export default function StreamVideo() {
             <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary"></span>
           </span>
         </div>
-        <h3 className="text-xl font-bold mb-2">Waiting for Host</h3>
-        <p className="text-sm text-muted-foreground text-center max-w-sm leading-relaxed">
-          The room is active. Once the host starts sharing their camera or screen, the stream will appear here automatically.
-        </p>
+        <h3 className="text-xl font-bold">Waiting for Host</h3>
       </div>
     );
   }
@@ -61,7 +58,7 @@ export default function StreamVideo() {
               key={`${participant.identity}-${trackReference.source}`}
               className={`relative aspect-video bg-secondary/40 rounded-xl overflow-hidden border transition-all duration-300 ${
                 isSpeaking 
-                  ? "border-primary ring-2 ring-primary/30 shadow-[0_0_20px_rgba(168,85,247,0.2)]" 
+                  ? "border-primary ring-2 ring-primary/30 shadow-[0_0_20px_rgba(255,255,255,0.15)]" 
                   : "border-border"
               }`}
             >

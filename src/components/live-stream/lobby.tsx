@@ -84,7 +84,7 @@ export default function Lobby() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[90vh] px-4 md:px-0">
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 bg-card border border-border/80 rounded-2xl p-6 md:p-10 shadow-2xl shadow-primary/5 backdrop-blur-md">
+      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 bg-card border border-border/80 rounded-2xl p-6 md:p-10 shadow-2xl backdrop-blur-md">
         
         {/* Left Side: Media Device Preview */}
         <div className="md:col-span-7 flex flex-col justify-between space-y-4">
@@ -119,7 +119,7 @@ export default function Lobby() {
               onClick={() => setLocalAudioEnabled(!localAudioEnabled)}
               className={`p-3 rounded-xl border transition-all duration-200 flex items-center justify-center ${
                 localAudioEnabled
-                  ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(168,85,247,0.15)]"
+                  ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(255,255,255,0.08)]"
                   : "bg-secondary hover:bg-muted border-border text-muted-foreground"
               }`}
               title={localAudioEnabled ? "Mute Microphone" : "Unmute Microphone"}
@@ -130,7 +130,7 @@ export default function Lobby() {
               onClick={() => setLocalVideoEnabled(!localVideoEnabled)}
               className={`p-3 rounded-xl border transition-all duration-200 flex items-center justify-center ${
                 localVideoEnabled
-                  ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(168,85,247,0.15)]"
+                  ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(255,255,255,0.08)]"
                   : "bg-secondary hover:bg-muted border-border text-muted-foreground"
               }`}
               title={localVideoEnabled ? "Disable Camera" : "Enable Camera"}
@@ -143,16 +143,9 @@ export default function Lobby() {
         {/* Right Side: Configuration & Form */}
         <div className="md:col-span-5 flex flex-col justify-center space-y-6">
           <div className="space-y-2">
-            <div className="flex items-center space-x-2 text-primary">
-              <Tv className="w-6 h-6 animate-pulse" />
-              <span className="text-xs uppercase tracking-widest font-bold">LiveKit Studio</span>
-            </div>
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
               Join Live Stream
             </h1>
-            <p className="text-sm text-muted-foreground">
-              Configure your nickname, stream room, and join the session.
-            </p>
           </div>
 
           <form onSubmit={handleJoin} className="space-y-5">
@@ -193,33 +186,27 @@ export default function Lobby() {
                 <button
                   type="button"
                   onClick={() => setInputRole("host")}
-                  className={`flex flex-col items-center justify-center p-3.5 border rounded-xl transition-all duration-200 group text-left ${
+                  className={`flex flex-col items-center justify-center p-4 border rounded-xl transition-all duration-200 group text-left ${
                     inputRole === "host"
-                      ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(168,85,247,0.15)]"
+                      ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(255,255,255,0.08)]"
                       : "bg-secondary/40 border-border text-muted-foreground hover:bg-secondary/80"
                   }`}
                 >
                   <Video className="w-5 h-5 mb-1.5" />
                   <span className="text-sm font-bold">Host</span>
-                  <span className="text-[10px] text-muted-foreground group-hover:text-foreground/80 mt-0.5 text-center">
-                    Can Stream Video & Mic
-                  </span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setInputRole("viewer")}
-                  className={`flex flex-col items-center justify-center p-3.5 border rounded-xl transition-all duration-200 group text-left ${
+                  className={`flex flex-col items-center justify-center p-4 border rounded-xl transition-all duration-200 group text-left ${
                     inputRole === "viewer"
-                      ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(168,85,247,0.15)]"
+                      ? "bg-primary/10 border-primary text-primary shadow-[0_0_15px_rgba(255,255,255,0.08)]"
                       : "bg-secondary/40 border-border text-muted-foreground hover:bg-secondary/80"
                   }`}
                 >
                   <Users className="w-5 h-5 mb-1.5" />
                   <span className="text-sm font-bold">Viewer</span>
-                  <span className="text-[10px] text-muted-foreground group-hover:text-foreground/80 mt-0.5 text-center">
-                    Watch & Chat
-                  </span>
                 </button>
               </div>
             </div>
@@ -232,7 +219,7 @@ export default function Lobby() {
 
             <button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer text-center text-sm flex items-center justify-center space-x-2"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-4 rounded-xl shadow-lg shadow-white/5 hover:shadow-white/10 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer text-center text-sm flex items-center justify-center space-x-2"
             >
               <span>Enter Stream Lobby</span>
             </button>

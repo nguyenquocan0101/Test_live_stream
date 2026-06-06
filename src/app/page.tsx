@@ -10,7 +10,7 @@ export default function Home() {
   const { isJoined, roomName } = useStreamStore();
 
   return (
-    <div className="flex flex-col min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900 via-neutral-950 to-black font-sans text-foreground">
+    <div className="flex flex-col min-h-screen bg-background font-sans text-foreground">
       
       {/* Top Navbar */}
       <header className="border-b border-border/80 bg-black/60 backdrop-blur-md sticky top-0 z-50 shrink-0">
@@ -21,10 +21,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-sm tracking-widest text-white leading-none">
-                LIVEKIT STUDIO
-              </span>
-              <span className="text-[10px] text-muted-foreground font-semibold mt-1">
-                2-WAY STREAM CLIENT
+                STUDIO
               </span>
             </div>
           </div>
@@ -47,28 +44,6 @@ export default function Home() {
       <main className="flex-1 flex flex-col max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 justify-center">
         {isJoined ? <StreamContainer /> : <Lobby />}
       </main>
-
-      {/* Footer */}
-      <footer className="border-t border-border/60 bg-black/45 py-6 shrink-0 mt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground space-y-3 md:space-y-0">
-          <div className="flex items-center space-x-1">
-            <span>Built with</span>
-            <Heart className="w-3.5 h-3.5 text-primary fill-primary animate-pulse" />
-            <span>using Next.js, LiveKit & Tailwind CSS</span>
-          </div>
-          <div className="flex space-x-6 font-semibold">
-            <a href="https://livekit.io" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
-              LiveKit Docs
-            </a>
-            <a href="https://nextjs.org" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
-              Next.js
-            </a>
-            <a href="https://zustand.docs.pmnd.rs" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
-              Zustand
-            </a>
-          </div>
-        </div>
-      </footer>
 
     </div>
   );

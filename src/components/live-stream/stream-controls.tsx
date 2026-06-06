@@ -49,7 +49,7 @@ export default function StreamControls({ onLeave }: StreamControlsProps) {
           onClick={handleToggleMic}
           className={`p-3 rounded-xl border transition-all duration-200 cursor-pointer ${
             isMicrophoneEnabled
-              ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(168,85,247,0.1)]"
+              ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(255,255,255,0.05)]"
               : "bg-destructive/10 border-destructive/30 text-destructive"
           }`}
           title={isMicrophoneEnabled ? "Mute Microphone" : "Unmute Microphone"}
@@ -64,7 +64,7 @@ export default function StreamControls({ onLeave }: StreamControlsProps) {
           onClick={handleToggleCamera}
           className={`p-3 rounded-xl border transition-all duration-200 cursor-pointer ${
             isCameraEnabled
-              ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(168,85,247,0.1)]"
+              ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(255,255,255,0.05)]"
               : "bg-destructive/10 border-destructive/30 text-destructive"
           }`}
           title={isCameraEnabled ? "Disable Camera" : "Enable Camera"}
@@ -79,7 +79,7 @@ export default function StreamControls({ onLeave }: StreamControlsProps) {
           onClick={handleToggleScreenShare}
           className={`p-3 rounded-xl border transition-all duration-200 cursor-pointer ${
             isScreenShareEnabled
-              ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(168,85,247,0.1)]"
+              ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(255,255,255,0.05)]"
               : "bg-secondary hover:bg-muted border-border text-muted-foreground"
           }`}
           title={isScreenShareEnabled ? "Stop Screen Share" : "Start Screen Share"}
@@ -91,11 +91,10 @@ export default function StreamControls({ onLeave }: StreamControlsProps) {
       {/* Role Switcher (Helper for testing 2-way streaming easily) */}
       <button
         onClick={handleSwapRole}
-        className="px-4 py-2.5 rounded-xl border border-border bg-secondary hover:bg-muted text-xs font-semibold text-foreground transition-all flex items-center space-x-2 cursor-pointer"
+        className="p-3 rounded-xl border border-border bg-secondary hover:bg-muted text-foreground transition-all flex items-center justify-center cursor-pointer"
         title={`Switch role to ${role === "host" ? "Viewer" : "Host"}`}
       >
-        <RefreshCw className="w-3.5 h-3.5 text-primary" />
-        <span>Become {role === "host" ? "Viewer" : "Host"}</span>
+        <RefreshCw className="w-5 h-5 text-primary" />
       </button>
 
       {/* Divider */}
@@ -106,7 +105,7 @@ export default function StreamControls({ onLeave }: StreamControlsProps) {
         onClick={toggleChat}
         className={`p-3 rounded-xl border transition-all duration-200 cursor-pointer ${
           isChatOpen
-            ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(168,85,247,0.1)]"
+            ? "bg-primary/10 border-primary text-primary shadow-[0_0_10px_rgba(255,255,255,0.05)]"
             : "bg-secondary hover:bg-muted border-border text-muted-foreground"
         }`}
         title={isChatOpen ? "Hide Chat" : "Show Chat"}

@@ -56,7 +56,6 @@ export default function StreamContainer() {
         <Loader2 className="w-10 h-10 text-primary animate-spin" />
         <div className="text-center">
           <p className="text-lg font-semibold">Generating stream credentials...</p>
-          <p className="text-xs text-muted-foreground mt-1">Establishing secure WebRTC session parameters</p>
         </div>
       </div>
     );
@@ -87,7 +86,7 @@ export default function StreamContainer() {
             </button>
             <button
               onClick={() => refetch()}
-              className="flex-1 bg-primary hover:bg-primary/95 text-white font-bold py-2.5 rounded-xl text-sm shadow-md transition-all flex items-center justify-center space-x-2 cursor-pointer"
+              className="flex-1 bg-primary hover:bg-primary/95 text-primary-foreground font-bold py-2.5 rounded-xl text-sm shadow-md transition-all flex items-center justify-center space-x-2 cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
               <span>Retry Connection</span>
